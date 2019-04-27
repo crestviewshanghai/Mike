@@ -1,0 +1,44 @@
+﻿@page
+@model ProjectManagement.Pages.Club.LoginModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Pages/Shared/_LayoutFrontAnonymous.cshtml";
+}
+
+<form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="LogInData.Username" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="LogInData.Username" class="form-control" />
+            <span asp-validation-for="LogInData.Username" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LogInData.Password" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="LogInData.Password" class="form-control" />
+            <span asp-validation-for="LogInData.Password" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <div class="checkbox">
+                <label asp-for="LogInData.RememberMe">
+                    <input asp-for="LogInData.RememberMe" />
+                    @Html.DisplayNameFor(m => m.LogInData.RememberMe)
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-default">Log In</button>
+        </div>
+    </div>
+</form>
+

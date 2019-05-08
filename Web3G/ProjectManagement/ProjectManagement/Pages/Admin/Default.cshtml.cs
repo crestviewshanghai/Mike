@@ -20,12 +20,12 @@ namespace ProjectManagement.Pages.Admin
     //[Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme)]
     //[Authorize(Roles = "BackAdmin")]
     //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-    public class AdminDefaultModel : BasePageModelAdminAuthenticated //PageModel
+    public class DefaultModel : BasePageModelAdminAuthenticated //PageModel
     {
 
         #region "Constructure"
 
-        public AdminDefaultModel(IOptionsSnapshot<Config> objConnectionStringConfig) : base(objConnectionStringConfig)
+        public DefaultModel(IOptionsSnapshot<Config> objConnectionStringConfig) : base(objConnectionStringConfig)
         {
             //
         }
@@ -38,3 +38,18 @@ namespace ProjectManagement.Pages.Admin
         }
     }
 }
+
+
+//Visual Studio Issue
+//One or more errors occurred
+//Cannot connect to runtime process, timeout after 10000 ms(reason: Cannot connect to the target: Error enumerating targets: 0x800706ba).
+
+
+//Format Code Short-Cut Key
+//格式化代码快捷键：Ctrl + A + K + F
+//取消格式化代码快捷键：Ctrl + K + F
+
+//注释代码快捷键：Ctrl + K + C
+//取消注释快捷键：Ctrl + K + U
+
+//https://github.com/vuejs/vue/releases

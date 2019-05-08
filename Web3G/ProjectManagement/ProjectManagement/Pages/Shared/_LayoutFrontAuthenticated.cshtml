@@ -4,11 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ProjectManagement</title>
-        
+    <script src="~/js/vendor/Jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
+    @RenderSection("HeadLink", false)
 </head>
 <body>
+    @RenderSection("BodyTop", false)
+    <partial name="~/Pages/Shared/_PartialFrontHeader.cshtml" />
     <div>
         @RenderBody()
     </div>
+    <partial name="~/Pages/Shared/_PartialFrontFooter.cshtml" />
+    @RenderSection("BodyBottom", false)
+    @RenderSection("BodyScript", false)
 </body>
 </html>

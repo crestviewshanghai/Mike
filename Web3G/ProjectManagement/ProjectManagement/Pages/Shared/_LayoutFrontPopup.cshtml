@@ -9,11 +9,9 @@
 </head>
 <body>
     @RenderSection("BodyTop", false)
-    <partial name="~/Pages/Shared/_PartialBackHeader.cshtml" />
     <div>
         @RenderBody()
     </div>
-    <partial name="~/Pages/Shared/_PartialBackFooter.cshtml" />
     @RenderSection("BodyBottom", false)
     @RenderSection("BodyScript", false)
 </body>

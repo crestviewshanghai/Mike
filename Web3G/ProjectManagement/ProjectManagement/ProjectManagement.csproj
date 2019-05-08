@@ -3,7 +3,19 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\vendor\vue-2.6.10\examples\**" />
+    <Content Remove="wwwroot\vendor\vue-2.6.10\examples\**" />
+    <EmbeddedResource Remove="wwwroot\vendor\vue-2.6.10\examples\**" />
+    <None Remove="wwwroot\vendor\vue-2.6.10\examples\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\vendor\vue-2.6.10\readme.txt" />
+  </ItemGroup>
 
 
   <ItemGroup>
